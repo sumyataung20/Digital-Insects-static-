@@ -29,6 +29,14 @@
   font-style: normal;
 }
 
+@font-face{
+  font-family: 'Number font';
+  src: url('../src/Fonts/Arialn.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  
+}
+
 
 .custom-card-media {
   pointer-events: none;

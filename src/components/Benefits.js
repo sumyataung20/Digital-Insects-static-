@@ -57,7 +57,7 @@ const Benefitcomponent = () => {
                style={{
                     border: "none",
                     shadow: 0,
-                    marginTop: "100px",
+                    marginTop: "50px",
                }}
           >
                <Grid container spacing={2}>
