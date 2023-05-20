@@ -19,6 +19,10 @@ const useStyles = makeStyles({
     maxWidth: "100%",
   },
 
+  table: {
+    // tableLayout: "auto",
+  },
+
   tableCell: {
     minWidth: 150,
   },
@@ -40,9 +44,9 @@ const ScrollableTable = () => {
 
   return (
     <Box className={classes.box}>
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <TableContainer component={Paper} className={classes.tableContainer}>
-          <Table>
+          <Table className={classes.table}>
             <TableHead>
               <TableRow
                 style={{
@@ -55,25 +59,45 @@ const ScrollableTable = () => {
               >
                 <TableCell
                   className={classes.tableCell}
-                  sx={{ color: "#B10B0B", fontWeight: "900", fontSize: "17px" }}
+                  sx={{
+                    color: "#B10B0B",
+                    fontWeight: "900",
+                    fontSize: "17px",
+                    width: "300px",
+                  }}
                 >
                   Features
                 </TableCell>
                 <TableCell
                   className={classes.tableCell}
-                  sx={{ color: "#B10B0B", fontWeight: "900", fontSize: "17px" }}
+                  sx={{
+                    color: "#B10B0B",
+                    fontWeight: "900",
+                    fontSize: "17px",
+                    width: "300px",
+                  }}
                 >
                   Initial Package
                 </TableCell>
                 <TableCell
                   className={classes.tableCell}
-                  sx={{ color: "#B10B0B", fontWeight: "900", fontSize: "17px" }}
+                  sx={{
+                    color: "#B10B0B",
+                    fontWeight: "900",
+                    fontSize: "16px",
+                    width: "300px",
+                  }}
                 >
                   Recommended Package
                 </TableCell>
                 <TableCell
                   className={classes.tableCell}
-                  sx={{ color: "#B10B0B", fontWeight: "900", fontSize: "17px" }}
+                  sx={{
+                    color: "#B10B0B",
+                    fontWeight: "900",
+                    fontSize: "17px",
+                    width: "300px",
+                  }}
                 >
                   Premium Package
                 </TableCell>

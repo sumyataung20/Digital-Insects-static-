@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#FBF5F5",
     marginTop: "-25px",
     [theme.breakpoints.down("sm")]: {
-      marginTop: theme.spacing(10),
+      paddingTop: "30px",
     },
   },
 
@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
 function MyComponent() {
   const classes = useStyles();
   return (
-    <Box className={classes.box}>
+    <Box className={classes.box} id="services">
       <Container maxWidth="xl">
         <div className={classes.classcontainer}>
           <Grid container spacing={2} sx={{ backgroundColor: "#FBF5F5" }}>

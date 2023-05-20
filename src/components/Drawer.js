@@ -1,106 +1,160 @@
-// import React from "react";
-// import {
-//   Drawer,
-//   List,
-//   ListItemButton,
-//   ListItemIcon,
-//   ListItemText,
-//   IconButton,
-// } from "@mui/material";
-// import { useState } from "react";
-// import MenuIcon from "@mui/icons-material/Menu";
+import React, { useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Drawer from "@material-ui/core/Drawer";
+import { IconButton } from "@mui/material";
+import { Button } from "@material-ui/core";
+import HomeIcon from "@mui/icons-material/Home";
+import DesignServicesIcon from "@mui/icons-material/DesignServices";
+import RedeemIcon from "@mui/icons-material/Redeem";
+import CallIcon from "@mui/icons-material/Call";
 
-// import { Link } from "react-router-dom";
-// import Banner from "./Banner";
-// import MyComponent from "./Cards";
-// import ScrollableTable from "./ScrollCards";
-// import Footer from "./Footer";
-
-// // const PAGES = [
-// //   { label: "Home", component: Banner, path: "./Banner" },
-// //   { label: "Services", component: MyComponent, path: "/Cards" },
-// //   { label: "Packages", component: ScrollableTable, path: "/ScrollCards" },
-// //   { label: "Contact Us", component: Footer, path: "/Footer" },
-// // ];
-
-// const PAGES = ["Home", "Services", "Packages", "Contact Us"];
-
-// const DrawerLeft = () => {
-//   const [openDrawer, setOpenDrawer] = useState(false);
-//   return (
-//     <React.Fragment>
-//       <Drawer
-//         open={openDrawer}
-//         onClose={() => setOpenDrawer(false)}
-//         PaperProps={{
-//           sx: { width: "50%", backgroundColor: "#970707" },
-//         }}
-//       >
-//         <List>
-//           {PAGES.map((page, index) => (
-//             <ListItemButton key={index}>
-//               <ListItemIcon>
-//                 <ListItemText primary={page.label} style={{ color: "white" }} />
-//               </ListItemIcon>
-//             </ListItemButton>
-//           ))}
-//         </List>
-//       </Drawer>
-
-//       <IconButton
-//         sx={{ color: "white", marginLeft: "auto" }}
-//         onClick={() => setOpenDrawer(!openDrawer)}
-//       >
-//         <MenuIcon />
-//       </IconButton>
-//     </React.Fragment>
-//   );
-// };
-
-// export default DrawerLeft;
-
-import React from "react";
-import {
-  Drawer,
-  List,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  IconButton,
-} from "@mui/material";
-import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
-const PAGES = ["Home", "Services", "Packages", "Contact Us"];
+
+const drawerWidth = 240;
+
+const useStyles = makeStyles((theme) => ({
+  drawer: {
+    width: drawerWidth,
+
+    flexShrink: 0,
+  },
+
+  drawerPaper: {
+    width: drawerWidth,
+    backgroundColor: "#970707",
+  },
+
+  drawerContainer: {
+    overflow: "auto",
+  },
+  a: {
+    color: "#FFFFFF",
+    textDecoration: "none",
+
+    "&:hover": {
+      color: "#000000",
+    },
+  },
+
+  navbar: {
+    listStyleType: "none",
+    paddingTop: theme.spacing(3),
+  },
+
+  listitem: {
+    marginBottom: "10px",
+
+    "&:hover": {
+      color: "rgba(0,0,0,0.5)",
+    },
+  },
+
+  icon: {
+    marginRight: "8px",
+  },
+}));
 
 const DrawerLeft = () => {
-  const [openDrawer, setOpenDrawer] = useState(false);
+  const classes = useStyles();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggleDrawer = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <React.Fragment>
+    <>
       <Drawer
-        open={openDrawer}
-        onClose={() => setOpenDrawer(false)}
-        PaperProps={{
-          sx: { width: "50%", backgroundColor: "#970707" },
+        className={classes.drawer}
+        variant="persistent"
+        anchor="left"
+        open={isOpen}
+        classes={{
+          paper: classes.drawerPaper,
         }}
       >
-        <List>
-          {PAGES.map((page, index) => (
-            <ListItemButton key={index}>
-              <ListItemIcon>
-                <ListItemText style={{ color: "white" }}>{page}</ListItemText>
-              </ListItemIcon>
-            </ListItemButton>
-          ))}
-        </List>
+        <div className={classes.drawerContainer}>
+          <ul className={classes.navbar}>
+            <li className={classes.listitem} onClick={handleLinkClick}>
+              <Button variant="text">
+                <a
+                  href="#banner"
+                  className={classes.a}
+                  style={{ fontSize: "15px", fontWeight: "bold" }}
+                >
+                  <HomeIcon
+                    sx={{ fontSize: "20px" }}
+                    className={classes.icon}
+                  />{" "}
+                  <span>Home</span>
+                </a>
+              </Button>
+            </li>
+
+            <li className={classes.listitem} onClick={handleLinkClick}>
+              <Button variant="text">
+                <a
+                  href="#services"
+                  className={classes.a}
+                  style={{ fontSize: "15px", fontWeight: "bold" }}
+                >
+                  <DesignServicesIcon
+                    sx={{ fontSize: "20px" }}
+                    className={classes.icon}
+                  />
+                  Services
+                </a>
+              </Button>
+            </li>
+            <li className={classes.listitem}>
+              <Button variant="text">
+                {" "}
+                <a
+                  href="#packages"
+                  className={classes.a}
+                  onClick={handleLinkClick}
+                  style={{ fontSize: "15px", fontWeight: "bold" }}
+                >
+                  <RedeemIcon
+                    sx={{ fontSize: "20px" }}
+                    className={classes.icon}
+                  />
+                  Packages
+                </a>
+              </Button>
+            </li>
+            <li className={classes.listitem}>
+              <Button variant="text">
+                <a
+                  href="#footer"
+                  className={classes.a}
+                  onClick={handleLinkClick}
+                  style={{ fontSize: "15px", fontWeight: "bold" }}
+                >
+                  <CallIcon
+                    sx={{ fontSize: "20px" }}
+                    className={classes.icon}
+                  />
+                  Contact Us
+                </a>{" "}
+              </Button>
+            </li>
+          </ul>
+        </div>
       </Drawer>
 
       <IconButton
-        sx={{ color: "white", marginLeft: "auto" }}
-        onClick={() => setOpenDrawer(!openDrawer)}
+        sx={{ color: "white", marginLeft: "auto", padding: "5px" }}
+        onClick={handleToggleDrawer}
+        className={classes.menu}
       >
         <MenuIcon />
       </IconButton>
-    </React.Fragment>
+    </>
   );
 };
 

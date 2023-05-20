@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#FFFFFF",
 
     borderTop: "3px solid #B10B0B",
-    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.6)",
+    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
     position: "relative",
     marginBottom: "40px",
 
@@ -110,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
 function MyComponent() {
   const classes = useStyles();
   return (
-    <Box className={classes.box}>
+    <Box className={classes.box} id="packages">
       <Container maxWidth="xl">
         <div className={classes.title}>Choose Your Path To Success</div>
         <div className={classes.subtitle}>
