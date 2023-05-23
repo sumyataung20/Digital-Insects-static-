@@ -13,8 +13,11 @@ const useStyles = makeStyles((theme) => ({
   box: {
     backgroundColor: "#FBF5F5",
     marginTop: "-25px",
+    paddingTop: "100px",
+    paddingBottom: "100px",
     [theme.breakpoints.down("sm")]: {
       paddingTop: "30px",
+      paddingBottom: "30px",
     },
   },
 
@@ -131,7 +134,7 @@ function MyComponent() {
                 </p>
                 <div className={classes.content}>
                   We provide ongoing website maintence and support to ensure
-                  your website stays up-to-date and secure
+                  your website stays up-to-date and secured
                 </div>
               </div>
             </Grid>

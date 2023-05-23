@@ -1,9 +1,12 @@
 import { Box, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
+
 import "../App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import React from "react";
 import { Container } from "@mui/material";
+import CheckIcon from "@mui/icons-material/Check";
+import ClearIcon from "@mui/icons-material/Clear";
 
 const useStyles = makeStyles((theme) => ({
   title: {
@@ -106,12 +109,70 @@ const useStyles = makeStyles((theme) => ({
       marginRight: "auto",
     },
   },
+
+  table: {
+    marginTop: "150px",
+    borderCollapse: "collapse",
+
+    maxWidth: "100%",
+
+    // marginBottom: "80px",
+    [theme.breakpoints.down("md")]: {
+      marginTop: "100px",
+    },
+  },
+
+  tableContainer: {
+    overflowX: "auto",
+  },
+
+  th: {
+    minWidth: 150,
+    color: "#B10B0B",
+    fontWeight: "900",
+    fontSize: "17px",
+    width: "300px",
+    padding: "10px 15px",
+  },
+
+  tr: {
+    borderTop: "0px",
+    borderBottom: "2px solid #DD0E0E",
+    backgroundColor: "#FBF5F5",
+    paddingTop: "50px",
+  },
+
+  tr1: {
+    borderBottom: "1px solid rgba(0,0,0,0.1)",
+    // backgroundColor: "#FBF5F5",
+  },
+
+  badge1: {
+    position: "absolute",
+    right: 40,
+    top: -8,
+    backgroundColor: "#B10B0B",
+    color: "#FFFFFF",
+    width: "60px",
+    textAlign: "center",
+    padding: "4px 8px",
+    borderRadius: "16px",
+    fontSize: "12px",
+    display: "inline-block",
+    [theme.breakpoints.down("sm")]: {
+      right: 10,
+      top: -10,
+    },
+  },
+  badgeholder: {
+    position: "relative",
+  },
 }));
 function MyComponent() {
   const classes = useStyles();
   return (
-    <Box className={classes.box} id="packages">
-      <Container maxWidth="xl">
+    <Box className={classes.box}>
+      <Container maxWidth="xl" id="packages">
         <div className={classes.title}>Choose Your Path To Success</div>
         <div className={classes.subtitle}>
           ----- TAILORED FOR YOUR WEB SERVICE GOALS -----
@@ -199,6 +260,7 @@ function MyComponent() {
                     style={{
                       color: "#B10B0B",
                       fontWeight: 900,
+
                       fontSize: "25px",
                       letterSpacing: "2px",
                       fontFamily: "Number Font",
@@ -284,6 +346,167 @@ function MyComponent() {
               </div>
             </Grid>
           </Grid>
+        </div>
+      </Container>
+      <Container
+        maxWidth="xl"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <div className={classes.tableContainer}>
+          <table className={classes.table}>
+            <tr className={classes.tr}>
+              <th className={classes.th}>Features</th>
+              <th className={classes.th}>Initial Package</th>
+
+              <th
+                style={{
+                  color: "#B10B0B",
+                  minWidth: 150,
+
+                  fontWeight: "900",
+                  fontSize: "17px",
+                  width: "300px",
+                  padding: "10px 15px",
+                }}
+                className={classes.badgeholder}
+              >
+                {" "}
+                <span className={classes.badge1}>popular</span>
+                Recommended Package
+              </th>
+
+              <th className={classes.th}>Premium Package</th>
+            </tr>
+            <tr className={classes.tr1}>
+              <td className={classes.th}>Web pages</td>
+              <td className={classes.th}>Up to 10 pages</td>
+              <td className={classes.th}>Up to 50 pages</td>
+              <td className={classes.th} sx={{ color: "#B10B0B" }}>
+                Unlimited Pages
+              </td>
+            </tr>
+            <tr className={classes.tr1}>
+              <th className={classes.th}>Responsiveness</th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+            </tr>
+
+            <tr className={classes.tr1}>
+              <th className={classes.th}>Design</th>
+              <th className={classes.th}>Standard</th>
+              <th className={classes.th}>Innovative</th>
+              <th className={classes.th}>Tailored</th>
+            </tr>
+
+            <tr className={classes.tr1}>
+              <th className={classes.th}>Social Media Integration</th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+            </tr>
+
+            <tr className={classes.tr1}>
+              <th className={classes.th}>Messenger Integration</th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+            </tr>
+
+            <tr className={classes.tr1}>
+              <th className={classes.th}>Content Management System</th>
+              <th className={classes.th}>
+                <ClearIcon sx={{ color: "#DD0E0E" }} />
+              </th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+            </tr>
+
+            <tr className={classes.tr1}>
+              <th className={classes.th}>User Registration</th>
+              <th className={classes.th}>
+                <ClearIcon sx={{ color: "#DD0E0E" }} />
+              </th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+            </tr>
+
+            <tr className={classes.tr1}>
+              <th className={classes.th}>Team Management System</th>
+              <th className={classes.th}>
+                <ClearIcon sx={{ color: "#DD0E0E" }} />
+              </th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+            </tr>
+
+            <tr className={classes.tr1}>
+              <th className={classes.th}>Admin portal</th>
+              <th className={classes.th}>
+                <ClearIcon sx={{ color: "#DD0E0E" }} />
+              </th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+            </tr>
+
+            <tr className={classes.tr1}>
+              <th className={classes.th}>Push notification</th>
+              <th className={classes.th}>
+                <ClearIcon sx={{ color: "#DD0E0E" }} />
+              </th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+            </tr>
+
+            <tr className={classes.tr1}>
+              <th className={classes.th}>Customer Support</th>
+              <th className={classes.th}>Normal</th>
+              <th className={classes.th}>Prioritized</th>
+              <th className={classes.th}>24/7</th>
+            </tr>
+          </table>
         </div>
       </Container>
     </Box>

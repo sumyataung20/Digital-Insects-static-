@@ -3,10 +3,9 @@ import { AppBar } from "@mui/material";
 import { styled } from "@mui/system";
 import logo from "../Images/beetlesWhite.png";
 import { makeStyles } from "@material-ui/core/styles";
-import { IconButton } from "@mui/material";
-import { FaFacebook } from "react-icons/fa";
-import { FaFacebookMessenger } from "react-icons/fa";
-import { FaTelegram } from "react-icons/fa";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import EmailIcon from "@mui/icons-material/Email";
+import PhoneIcon from "@mui/icons-material/Phone";
 import "../App.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -32,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "50px",
     fontSize: "20px",
     [theme.breakpoints.down("sm")]: {
+      marginTop: "20px",
       fontSize: "15px",
     },
   },
@@ -56,39 +56,26 @@ const Footer = () => {
         </div>
 
         <div className={classes.footertext}>
-          <p> Phone: 09888666558 </p>
-          <p> Email: digitalinsects.gmail.com </p>
-          <div className={classes.footerIcon}>
-            <IconButton
-              href="https://www.facebook.com/example"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              sx={{ color: "#ffffff" }}
+          <p>
+            {" "}
+            <PhoneIcon sx={{ marginRight: "3px", marginBottom: "2px" }} />{" "}
+            Phone: 09 691501020{" "}
+          </p>
+          <p>
+            {" "}
+            <EmailIcon sx={{ marginRight: "3px", marginBottom: "2px" }} />{" "}
+            Email: info@digitalinsects.com{" "}
+          </p>
+          <p>
+            <FacebookIcon sx={{ marginRight: "3px", marginBottom: "3px" }} />
+            <span sx={{ marginRight: "2px" }}> Facebook: </span>
+            <a
+              href="https://www.facebook.com/digitalinsects"
+              style={{ textDecoration: "none", color: "#FFFFFF" }}
             >
-              <FaFacebook size={32} />
-            </IconButton>
-
-            <IconButton
-              href="https://www.facebook.com/example"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              sx={{ color: "#ffffff" }}
-            >
-              <FaFacebookMessenger size={32} />
-            </IconButton>
-
-            <IconButton
-              href="https://www.facebook.com/example"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              sx={{ color: "#ffffff" }}
-            >
-              <FaTelegram size={32} />
-            </IconButton>
-          </div>
+              Digital Insects
+            </a>
+          </p>
         </div>
       </div>
     </FooterContainer>
