@@ -6,7 +6,7 @@ import { Box, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 import "../App.css";
 import "bootstrap/dist/css/bootstrap.css";
-
+import React from "react";
 import { Container } from "@mui/material";
 
 const useStyles = makeStyles((theme) => ({

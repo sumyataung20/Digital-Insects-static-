@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-
+import React from "react";
 import banner from "../Images/Banner.png";
 
 const useStyles = makeStyles((theme) => ({
