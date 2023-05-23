@@ -148,7 +148,7 @@ function MyComponent() {
                       fontFamily: "Number Font",
                     }}
                   >
-                    85000
+                    85,000
                   </span>{" "}
                   <br />{" "}
                   <span
@@ -204,7 +204,7 @@ function MyComponent() {
                       fontFamily: "Number Font",
                     }}
                   >
-                    180000
+                    180,000
                   </span>{" "}
                   <br />{" "}
                   <span
@@ -259,7 +259,7 @@ function MyComponent() {
                       fontFamily: "Number Font",
                     }}
                   >
-                    300000
+                    300,000
                   </span>{" "}
                   <br />{" "}
                   <span

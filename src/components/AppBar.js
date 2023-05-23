@@ -71,7 +71,7 @@ const AppBarComponent = (props) => {
   return (
     <>
       <React.Fragment>
-        <AppBar position="static" className={classes.appBar} elevation={0}>
+        <AppBar position="fixed" className={classes.appBar} elevation={0}>
           <Toolbar>
             <MyComponent />
 
