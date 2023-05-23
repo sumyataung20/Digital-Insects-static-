@@ -1,9 +1,8 @@
 import { AppBar, Toolbar, useMediaQuery, useTheme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-// import { makeStyles } from "@mui/material";
 import React from "react";
+import logo from "../Images/logo.png";
 
-import MyComponent from "./MyComponent";
 import DrawerLeft from "./Drawer";
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -30,6 +29,45 @@ const useStyles = makeStyles((theme) => ({
       width: "100vw",
     },
   },
+  logo: {
+    paddingBottom: 0,
+
+    [theme.breakpoints.down("xl")]: {
+      marginLeft: theme.spacing(32),
+      marginBottom: theme.spacing(2),
+      paddingTop: theme.spacing(1),
+      width: "80px",
+      height: "80px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      marginLeft: theme.spacing(8),
+      marginBottom: theme.spacing(2),
+      paddingTop: theme.spacing(1),
+      width: "80px",
+      height: "80px",
+    },
+    [theme.breakpoints.down("md")]: {
+      marginLeft: theme.spacing(2),
+      marginBottom: theme.spacing(2),
+      paddingTop: theme.spacing(1),
+      width: "70px",
+      height: "70px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: theme.spacing(3),
+      marginBottom: theme.spacing(2),
+      paddingTop: theme.spacing(1),
+      width: "75px",
+      height: "75px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: theme.spacing(3),
+      marginBottom: theme.spacing(2),
+      paddingTop: theme.spacing(1),
+      width: "73px",
+      height: "73px",
+    },
+  },
 
   listitem: {
     float: "left",
@@ -37,10 +75,13 @@ const useStyles = makeStyles((theme) => ({
   },
 
   navbar: {
+    position: "absolute",
+    left: "18%",
+    top: 0,
     listStyleType: "none",
-    padding: "20px 45px",
-    paddingBottom: "30px",
+
     marginTop: "15px",
+    marginBottom: "23px",
   },
 
   a: {
@@ -48,17 +89,12 @@ const useStyles = makeStyles((theme) => ({
     display: "block",
     color: "#FFFFFF",
     textAlign: "center",
-    padding: "10px 16px",
-    paddingBottom: "2px",
+    marginRight: "35px",
     textDecoration: "none",
     fontSize: "18px",
     fontWeight: 500,
-    transition: "color fontSize 0.3s",
+    // transition: "color fontSize 0.3s",
     "&:hover": {
-      color: "rgba(0,0,0,0.5)",
-    },
-
-    "&.active": {
       color: "rgba(0,0,0,0.5)",
     },
   },
@@ -71,43 +107,70 @@ const AppBarComponent = (props) => {
   return (
     <>
       <React.Fragment>
-        <AppBar position="fixed" className={classes.appBar} elevation={0}>
-          <Toolbar>
-            <MyComponent />
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            zIndex: 999,
+          }}
+        >
+          <AppBar
+            className={classes.appBar}
+            elevation={0}
+            style={{ position: "relative" }}
+          >
+            <Toolbar>
+              <div style={{ position: "absolute", left: 0, top: "-22%" }}>
+                <img
+                  src={logo}
+                  alt={logo}
+                  style={{
+                    backgroundColor: "#FFFFFF",
+                    width: "80px",
+                    height: "80px",
 
-            {isMatch ? (
-              <>
-                <DrawerLeft />
-              </>
-            ) : (
-              <>
-                <ul className={classes.navbar}>
-                  <li className={classes.listitem}>
-                    <a href="#banner" className={classes.a}>
-                      Home
-                    </a>
-                  </li>
-                  <li className={classes.listitem}>
-                    <a href="#services" className={classes.a}>
-                      Services
-                    </a>
-                  </li>
-                  <li className={classes.listitem}>
-                    <a href="#packages" className={classes.a}>
-                      Packages
-                    </a>
-                  </li>
-                  <li className={classes.listitem}>
-                    <a href="#footer" className={classes.a}>
-                      Contact Us
-                    </a>
-                  </li>
-                </ul>
-              </>
-            )}
-          </Toolbar>
-          {/* // <DrawerLeft /> */}
-        </AppBar>
+                    objectFit: "contain",
+                  }}
+                  className={classes.logo}
+                />
+              </div>
+
+              {isMatch ? (
+                <>
+                  <DrawerLeft />
+                </>
+              ) : (
+                <>
+                  <ul className={classes.navbar}>
+                    <li className={classes.listitem}>
+                      <a href="#banner" className={classes.a}>
+                        Home
+                      </a>
+                    </li>
+                    <li className={classes.listitem}>
+                      <a href="#services" className={classes.a}>
+                        Services
+                      </a>
+                    </li>
+                    <li className={classes.listitem}>
+                      <a href="#packages" className={classes.a}>
+                        Packages
+                      </a>
+                    </li>
+                    <li className={classes.listitem}>
+                      <a href="#footer" className={classes.a}>
+                        Contact Us
+                      </a>
+                    </li>
+                  </ul>
+                </>
+              )}
+            </Toolbar>
+            {/* // <DrawerLeft /> */}
+          </AppBar>
+        </div>
       </React.Fragment>
     </>
   );

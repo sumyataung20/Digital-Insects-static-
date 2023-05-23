@@ -4,6 +4,8 @@ import logo from "../Images/logo.png";
 
 const useStyles = makeStyles((theme) => ({
   logo: {
+    paddingBottom: 0,
+
     [theme.breakpoints.down("xl")]: {
       marginLeft: theme.spacing(32),
       marginBottom: theme.spacing(2),
