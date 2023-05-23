@@ -1,9 +1,9 @@
 import { AppBar, Toolbar, useMediaQuery, useTheme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import logo from "../Images/logo.png";
 
 import DrawerLeft from "./Drawer";
+import MyComponent from "./MyComponent";
 const useStyles = makeStyles((theme) => ({
   appBar: {
     backgroundColor: "#970707",
@@ -29,55 +29,12 @@ const useStyles = makeStyles((theme) => ({
       width: "100vw",
     },
   },
-  logo: {
-    paddingBottom: 0,
-
-    [theme.breakpoints.down("xl")]: {
-      marginLeft: theme.spacing(32),
-      marginBottom: theme.spacing(2),
-      paddingTop: theme.spacing(1),
-      width: "80px",
-      height: "80px",
-    },
-    [theme.breakpoints.down("lg")]: {
-      marginLeft: theme.spacing(8),
-      marginBottom: theme.spacing(2),
-      paddingTop: theme.spacing(1),
-      width: "80px",
-      height: "80px",
-    },
-    [theme.breakpoints.down("md")]: {
-      marginLeft: theme.spacing(2),
-      marginBottom: theme.spacing(2),
-      paddingTop: theme.spacing(1),
-      width: "70px",
-      height: "70px",
-    },
-    [theme.breakpoints.down("sm")]: {
-      marginLeft: theme.spacing(3),
-      marginBottom: theme.spacing(2),
-      paddingTop: theme.spacing(1),
-      width: "75px",
-      height: "75px",
-    },
-    [theme.breakpoints.down("xs")]: {
-      marginLeft: theme.spacing(3),
-      marginBottom: theme.spacing(2),
-      paddingTop: theme.spacing(1),
-      width: "73px",
-      height: "73px",
-    },
-  },
 
   listitem: {
     float: "left",
-    fontSize: "20px",
   },
 
   navbar: {
-    position: "absolute",
-    left: "18%",
-    top: 0,
     listStyleType: "none",
 
     marginTop: "15px",
@@ -89,9 +46,9 @@ const useStyles = makeStyles((theme) => ({
     display: "block",
     color: "#FFFFFF",
     textAlign: "center",
-    marginRight: "35px",
+    padding: "10px 25px",
     textDecoration: "none",
-    fontSize: "18px",
+    fontSize: "22px",
     fontWeight: 500,
     // transition: "color fontSize 0.3s",
     "&:hover": {
@@ -122,19 +79,8 @@ const AppBarComponent = (props) => {
             style={{ position: "relative" }}
           >
             <Toolbar>
-              <div style={{ position: "absolute", left: 0, top: "-22%" }}>
-                <img
-                  src={logo}
-                  alt={logo}
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    width: "80px",
-                    height: "80px",
-
-                    objectFit: "contain",
-                  }}
-                  className={classes.logo}
-                />
+              <div>
+                <MyComponent />
               </div>
 
               {isMatch ? (

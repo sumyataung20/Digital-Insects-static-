@@ -1,31 +1,35 @@
 self.__precacheManifest = [
   {
-    "revision": "c46cb89afc14146d018d",
-    "url": "/static/css/main.d325fb5e.chunk.css"
+    "revision": "65675eea4feaa46f7226",
+    "url": "/static/css/main.8f6bdca6.chunk.css"
   },
   {
-    "revision": "c46cb89afc14146d018d",
-    "url": "/static/js/main.c46cb89a.chunk.js"
+    "revision": "65675eea4feaa46f7226",
+    "url": "/static/js/main.65675eea.chunk.js"
   },
   {
-    "revision": "b294daaa80292132610c",
-    "url": "/static/js/1.b294daaa.chunk.js"
+    "revision": "7efce5559c161ae60aed",
+    "url": "/static/js/1.7efce555.chunk.js"
   },
   {
-    "revision": "608c95c66e50bdbb853a",
-    "url": "/static/css/2.ebd86d51.chunk.css"
+    "revision": "b43b3ce4ff152fd618aa",
+    "url": "/static/css/2.06a54d01.chunk.css"
   },
   {
-    "revision": "608c95c66e50bdbb853a",
-    "url": "/static/js/2.608c95c6.chunk.js"
+    "revision": "b43b3ce4ff152fd618aa",
+    "url": "/static/js/2.b43b3ce4.chunk.js"
   },
   {
-    "revision": "96105c23258367a06e58",
-    "url": "/static/js/runtime~main.96105c23.js"
+    "revision": "d6d5c71225e39581441a",
+    "url": "/static/js/runtime~main.d6d5c712.js"
   },
   {
     "revision": "7ce860d72108ab2469bf95c3cdd0c74c",
     "url": "/static/media/BritannicDRegular.7ce860d7.ttf"
+  },
+  {
+    "revision": "c0e1dc37d2d4a02f0fabb25aac72d6db",
+    "url": "/static/media/LucidaUnicodeCalligraphy.c0e1dc37.ttf"
   },
   {
     "revision": "481816ebe7b2dc627596ef2fd9507f0b",
@@ -36,16 +40,12 @@ self.__precacheManifest = [
     "url": "/static/media/Garamond Regular.2bf40ab7.ttf"
   },
   {
-    "revision": "c0e1dc37d2d4a02f0fabb25aac72d6db",
-    "url": "/static/media/LucidaUnicodeCalligraphy.c0e1dc37.ttf"
-  },
-  {
     "revision": "a8006b37472df2e365d439d4ec1f48bf",
     "url": "/static/media/eb-garamond.12-regular.a8006b37.ttf"
   },
   {
-    "revision": "443a11034d097b723bfd13fd3a5a822f",
-    "url": "/static/media/logo.443a1103.png"
+    "revision": "26550e2c03f21752f2e02c2b85591d82",
+    "url": "/static/media/Digital Insects Logo.26550e2c.png"
   },
   {
     "revision": "0edb4027ecec1c1c181a1ad33e0ddce4",
@@ -76,7 +76,7 @@ self.__precacheManifest = [
     "url": "/static/media/beetlesWhite.59e36706.png"
   },
   {
-    "revision": "59a7f91927009aaaa959cab70b929c69",
+    "revision": "acce1cd9091d8ce6b52f40dfe7166ceb",
     "url": "/index.html"
   }
 ];

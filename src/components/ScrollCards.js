@@ -33,11 +33,11 @@ const useStyles = makeStyles({
     },
   },
 
-  box: {
-    backgroundColor: "#FBF5F5",
+  // box: {
+  //   backgroundColor: "#FBF5F5",
 
-    paddingBottom: "150px",
-  },
+  //   paddingBottom: "150px",
+  // },
 });
 const ScrollableTable = () => {
   const classes = useStyles();

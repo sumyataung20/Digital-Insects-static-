@@ -127,7 +127,7 @@ const Banner = () => {
           </Typography>
 
           <p className={classes.text1} sx={{ margin: "auto" }}>
-            Contact for a free consultation today and <br />
+            Contact for a free consultation now and <br />
             see how our web service can help your <br />
             business thrive
           </p>

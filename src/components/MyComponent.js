@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import logo from "../Images/logo.png";
+import logo from "../Images/Digital Insects Logo.png";
 
 const useStyles = makeStyles((theme) => ({
   logo: {
@@ -9,37 +9,44 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xl")]: {
       marginLeft: theme.spacing(32),
       marginBottom: theme.spacing(2),
-      paddingTop: theme.spacing(1),
-      width: "80px",
-      height: "80px",
+      paddingTop: theme.spacing(2),
+      paddingBottom: theme.spacing(1),
+      width: "70px",
+      height: "72px",
     },
     [theme.breakpoints.down("lg")]: {
       marginLeft: theme.spacing(8),
       marginBottom: theme.spacing(2),
-      paddingTop: theme.spacing(1),
-      width: "80px",
-      height: "80px",
+      paddingTop: theme.spacing(2),
+      paddingBottom: theme.spacing(1),
+      width: "70px",
+      height: "72px",
     },
     [theme.breakpoints.down("md")]: {
       marginLeft: theme.spacing(2),
       marginBottom: theme.spacing(2),
-      paddingTop: theme.spacing(1),
+      paddingTop: theme.spacing(2),
+      paddingBottom: theme.spacing(1),
       width: "70px",
-      height: "70px",
+      height: "72x",
     },
     [theme.breakpoints.down("sm")]: {
-      marginLeft: 0,
+      marginLeft: theme.spacing(2),
       marginBottom: theme.spacing(2),
-      paddingTop: theme.spacing(1),
-      width: "75px",
-      height: "75px",
+      paddingTop: theme.spacing(2),
+      paddingBottom: theme.spacing(1),
+
+      width: "70px",
+      height: "72px",
     },
     [theme.breakpoints.down("xs")]: {
-      marginLeft: 0,
+      marginLeft: theme.spacing(2),
+
       marginBottom: theme.spacing(2),
-      paddingTop: theme.spacing(1),
-      width: "73px",
-      height: "73px",
+      paddingTop: theme.spacing(2),
+      paddingBottom: theme.spacing(1),
+      width: "70px",
+      height: "72px",
     },
   },
 }));
