@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Card Font",
     marginRight: "5px",
     fontSize: 22,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 20,
+    },
   },
 
   span1: {
@@ -32,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 100,
     fontFamily: "Card Font",
     fontSize: 20,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 18,
+    },
   },
 
   img: {
