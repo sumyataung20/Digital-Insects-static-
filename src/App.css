@@ -1,8 +1,8 @@
 
 @font-face {
   font-family: 'My Font';
-  src: url('../src/Fonts/BritannicDRegular.ttf') format('truetype');
-  font-weight: normal;
+  src: url('../src/Fonts/Bitter-VariableFont_wght.ttf') format('truetype');
+  font-weight: 600;
   font-style: normal;
 }
 

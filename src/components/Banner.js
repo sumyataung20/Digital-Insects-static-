@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography, Box } from "@material-ui/core";
+import { useMediaQuery } from "@mui/material";
 import Banner2 from "./Banner2";
 import "../App.css";
 
@@ -8,20 +9,22 @@ const useStyles = makeStyles((theme) => ({
   text: {
     fontFamily: "My Font",
     color: "#6E0808",
+    fontWeight: 600,
+    // paddingLeft: "500px",
 
     [theme.breakpoints.down("xl")]: {
       marginLeft: theme.spacing(35),
       marginTop: theme.spacing(20),
-      fontSize: 80,
-      fontWeight: 500,
+      fontSize: 70,
+      // fontWeight: 500,
       lineHeight: "120px",
       letterSpacing: "5px",
     },
     [theme.breakpoints.down("lg")]: {
       marginTop: theme.spacing(20), // Margin for lg size and above
       marginLeft: theme.spacing(10),
-      fontSize: 65,
-      fontWeight: 300,
+      fontSize: 55,
+      // fontWeight: 300,
       lineHeight: "90px",
       letterSpacing: "4px",
     },
@@ -29,8 +32,8 @@ const useStyles = makeStyles((theme) => ({
       marginTop: theme.spacing(18), // Margin for md size and below
       marginLeft: theme.spacing(3),
 
-      fontSize: 65,
-      fontWeight: 300,
+      fontSize: 50,
+      // fontWeight: 300,
       lineHeight: "100px",
       letterSpacing: "2px",
     },
@@ -39,8 +42,8 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: "auto",
       marginRight: "auto",
       textAlign: "center",
-      fontSize: 50,
-      fontWeight: 200,
+      fontSize: 40,
+      // fontWeight: 200,
       lineHeight: "80px",
       letterSpacing: "2px",
     },
@@ -51,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
       marginRight: "auto",
       textAlign: "center",
       fontSize: 40,
-      fontWeight: 200,
+      // fontWeight: 200,
       lineHeight: "80px",
       letterSpacing: "2px",
     },
@@ -60,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
   text1: {
     color: "#000000",
     fontFamily: "My Font1",
+    // paddingLeft: "500px",
     [theme.breakpoints.down("xl")]: {
       marginLeft: theme.spacing(35),
       marginTop: theme.spacing(5),
@@ -99,11 +103,17 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: 15,
     },
   },
+
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 }));
 
 const Banner = () => {
   const classes = useStyles();
-
+  const isReallyBigScreen = useMediaQuery("(min-width: 3440px)");
   return (
     <div className={classes.container} id="banner">
       <Grid container spacing={2} className={classes.container}>
@@ -115,6 +125,11 @@ const Banner = () => {
           lg={6}
           xl={6}
           sx={{ marginTop: "50%" }}
+          style={
+            isReallyBigScreen
+              ? { paddingLeft: "700px" }
+              : { paddingLeft: "0px" }
+          }
         >
           <Typography
             variant="h1"

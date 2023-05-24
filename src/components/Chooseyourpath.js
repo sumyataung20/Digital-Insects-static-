@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#FFFFFF",
 
     borderTop: "3px solid #B10B0B",
-    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.4)",
     position: "relative",
     marginBottom: "40px",
 
@@ -127,12 +127,14 @@ const useStyles = makeStyles((theme) => ({
   },
 
   th: {
-    minWidth: 150,
+    minWidth: 100,
     color: "#B10B0B",
     fontWeight: "900",
     fontSize: "17px",
     width: "300px",
     padding: "10px 15px",
+    whiteSpace: "nowrap",
+    textAlign: "center",
   },
 
   tr: {
@@ -172,7 +174,7 @@ function MyComponent() {
   const classes = useStyles();
   return (
     <Box className={classes.box}>
-      <Container maxWidth="xl" id="packages">
+      <Container maxWidth="xl" id="packages" style={{ paddingTop: "30px" }}>
         <div className={classes.title}>Choose Your Path To Success</div>
         <div className={classes.subtitle}>
           ----- TAILORED FOR YOUR WEB SERVICE GOALS -----
@@ -359,7 +361,9 @@ function MyComponent() {
         <div className={classes.tableContainer}>
           <table className={classes.table}>
             <tr className={classes.tr}>
-              <th className={classes.th}>Features</th>
+              <th className={classes.th} style={{ color: "#404040" }}>
+                Features
+              </th>
               <th className={classes.th}>Initial Package</th>
 
               <th
@@ -371,6 +375,7 @@ function MyComponent() {
                   fontSize: "17px",
                   width: "300px",
                   padding: "10px 15px",
+                  whiteSpace: "nowrap",
                 }}
                 className={classes.badgeholder}
               >
@@ -382,35 +387,27 @@ function MyComponent() {
               <th className={classes.th}>Premium Package</th>
             </tr>
             <tr className={classes.tr1}>
-              <td className={classes.th}>Web pages</td>
-              <td className={classes.th}>Up to 10 pages</td>
+              <td
+                className={classes.th}
+                style={{ color: "#404040", textAlign: "start" }}
+              >
+                Web pages
+              </td>
+              <td className={classes.th} style={{ color: "#404040" }}>
+                Up to 10 pages
+              </td>
               <td className={classes.th}>Up to 50 pages</td>
-              <td className={classes.th} sx={{ color: "#B10B0B" }}>
+              <td className={classes.th} style={{ color: "#404040" }}>
                 Unlimited Pages
               </td>
             </tr>
             <tr className={classes.tr1}>
-              <th className={classes.th}>Responsiveness</th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
+              <th
+                className={classes.th}
+                style={{ color: "#404040", textAlign: "start" }}
+              >
+                Responsiveness
               </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-            </tr>
-
-            <tr className={classes.tr1}>
-              <th className={classes.th}>Design</th>
-              <th className={classes.th}>Standard</th>
-              <th className={classes.th}>Innovative</th>
-              <th className={classes.th}>Tailored</th>
-            </tr>
-
-            <tr className={classes.tr1}>
-              <th className={classes.th}>Social Media Integration</th>
               <th className={classes.th}>
                 <CheckIcon sx={{ color: "green" }} />
               </th>
@@ -423,7 +420,30 @@ function MyComponent() {
             </tr>
 
             <tr className={classes.tr1}>
-              <th className={classes.th}>Messenger Integration</th>
+              <th
+                className={classes.th}
+                style={{ color: "#404040", textAlign: "start" }}
+              >
+                Design
+              </th>
+              <th className={classes.th} style={{ color: "#404040" }}>
+                Standard
+              </th>
+              <th className={classes.th} style={{ color: "#B10B0B" }}>
+                Innovative
+              </th>
+              <th className={classes.th} style={{ color: "#404040" }}>
+                Tailored
+              </th>
+            </tr>
+
+            <tr className={classes.tr1}>
+              <th
+                className={classes.th}
+                style={{ color: "#404040", textAlign: "start" }}
+              >
+                Social Media Integration
+              </th>
               <th className={classes.th}>
                 <CheckIcon sx={{ color: "green" }} />
               </th>
@@ -436,7 +456,30 @@ function MyComponent() {
             </tr>
 
             <tr className={classes.tr1}>
-              <th className={classes.th}>Content Management System</th>
+              <th
+                className={classes.th}
+                style={{ color: "#404040", textAlign: "start" }}
+              >
+                Messenger Integration
+              </th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+              <th className={classes.th}>
+                <CheckIcon sx={{ color: "green" }} />
+              </th>
+            </tr>
+
+            <tr className={classes.tr1}>
+              <th
+                className={classes.th}
+                style={{ color: "#404040", textAlign: "start" }}
+              >
+                Content Management System
+              </th>
               <th className={classes.th}>
                 <ClearIcon sx={{ color: "#DD0E0E" }} />
               </th>
@@ -449,7 +492,12 @@ function MyComponent() {
             </tr>
 
             <tr className={classes.tr1}>
-              <th className={classes.th}>User Registration</th>
+              <th
+                className={classes.th}
+                style={{ color: "#404040", textAlign: "start" }}
+              >
+                User Registration
+              </th>
               <th className={classes.th}>
                 <ClearIcon sx={{ color: "#DD0E0E" }} />
               </th>
@@ -462,7 +510,12 @@ function MyComponent() {
             </tr>
 
             <tr className={classes.tr1}>
-              <th className={classes.th}>Team Management System</th>
+              <th
+                className={classes.th}
+                style={{ color: "#404040", textAlign: "start" }}
+              >
+                Team Management System
+              </th>
               <th className={classes.th}>
                 <ClearIcon sx={{ color: "#DD0E0E" }} />
               </th>
@@ -475,7 +528,12 @@ function MyComponent() {
             </tr>
 
             <tr className={classes.tr1}>
-              <th className={classes.th}>Admin portal</th>
+              <th
+                className={classes.th}
+                style={{ color: "#404040", textAlign: "start" }}
+              >
+                Admin portal
+              </th>
               <th className={classes.th}>
                 <ClearIcon sx={{ color: "#DD0E0E" }} />
               </th>
@@ -488,7 +546,12 @@ function MyComponent() {
             </tr>
 
             <tr className={classes.tr1}>
-              <th className={classes.th}>Push notification</th>
+              <th
+                className={classes.th}
+                style={{ color: "#404040", textAlign: "start" }}
+              >
+                Push notification
+              </th>
               <th className={classes.th}>
                 <ClearIcon sx={{ color: "#DD0E0E" }} />
               </th>
@@ -501,10 +564,21 @@ function MyComponent() {
             </tr>
 
             <tr className={classes.tr1}>
-              <th className={classes.th}>Customer Support</th>
-              <th className={classes.th}>Normal</th>
-              <th className={classes.th}>Prioritized</th>
-              <th className={classes.th}>24/7</th>
+              <th
+                className={classes.th}
+                style={{ color: "#404040", textAlign: "start" }}
+              >
+                Customer Support
+              </th>
+              <th className={classes.th} style={{ color: "#404040" }}>
+                Normal
+              </th>
+              <th className={classes.th} style={{ color: "#B10B0B" }}>
+                Prioritized
+              </th>
+              <th className={classes.th} style={{ color: "#404040" }}>
+                24/7
+              </th>
             </tr>
           </table>
         </div>

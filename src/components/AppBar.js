@@ -1,6 +1,7 @@
 import { AppBar, Toolbar, useMediaQuery, useTheme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
+import "../App.css";
 
 import DrawerLeft from "./Drawer";
 import MyComponent from "./MyComponent";
@@ -42,13 +43,14 @@ const useStyles = makeStyles((theme) => ({
   },
 
   a: {
+    fontFamily: "My Font",
     margin: "5px",
     display: "block",
     color: "#FFFFFF",
     textAlign: "center",
     padding: "10px 25px",
     textDecoration: "none",
-    fontSize: "22px",
+    fontSize: "20px",
     fontWeight: 500,
     // transition: "color fontSize 0.3s",
     "&:hover": {
