@@ -12,11 +12,11 @@ import { Container } from "@mui/material";
 const useStyles = makeStyles((theme) => ({
   box: {
     backgroundColor: "#FBF5F5",
-    marginTop: "-25px",
+    marginTop: "-18px",
     paddingTop: "100px",
     paddingBottom: "100px",
     [theme.breakpoints.down("sm")]: {
-      paddingTop: "30px",
+      paddingTop: "20px",
       paddingBottom: "30px",
     },
   },

@@ -152,7 +152,10 @@ const DrawerLeft = () => {
         onClick={handleToggleDrawer}
         className={classes.menu}
       >
-        <MenuIcon />
+        <div style={{ marginRight: "10px" }}>
+          {" "}
+          <MenuIcon />
+        </div>
       </IconButton>
     </>
   );

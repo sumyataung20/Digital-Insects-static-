@@ -129,7 +129,7 @@ const useStyles = makeStyles((theme) => ({
   th: {
     minWidth: 100,
     color: "#B10B0B",
-    fontWeight: "900",
+    fontWeight: "400",
     fontSize: "17px",
     width: "300px",
     padding: "10px 15px",
@@ -361,18 +361,44 @@ function MyComponent() {
         <div className={classes.tableContainer}>
           <table className={classes.table}>
             <tr className={classes.tr}>
-              <th className={classes.th} style={{ color: "#404040" }}>
+              <th
+                className={classes.th}
+                style={{
+                  color: "#404040",
+                  minWidth: 150,
+                  textAlign: "start",
+                  fontWeight: "500",
+                  fontSize: "18px",
+                  width: "300px",
+                  padding: "10px 15px",
+                  whiteSpace: "nowrap",
+                }}
+              >
                 Features
               </th>
-              <th className={classes.th}>Initial Package</th>
+              <th
+                className={classes.th}
+                style={{
+                  color: "#B10B0B",
+                  minWidth: 150,
+                  // textAlign: "start",
+                  fontWeight: "500",
+                  fontSize: "18px",
+                  width: "300px",
+                  padding: "10px 15px",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                Initial Package
+              </th>
 
               <th
                 style={{
                   color: "#B10B0B",
                   minWidth: 150,
 
-                  fontWeight: "900",
-                  fontSize: "17px",
+                  fontWeight: "500",
+                  fontSize: "18px",
                   width: "300px",
                   padding: "10px 15px",
                   whiteSpace: "nowrap",
@@ -384,7 +410,21 @@ function MyComponent() {
                 Recommended Package
               </th>
 
-              <th className={classes.th}>Premium Package</th>
+              <th
+                className={classes.th}
+                style={{
+                  color: "#B10B0B",
+                  minWidth: 150,
+
+                  fontWeight: "500",
+                  fontSize: "18px",
+                  width: "300px",
+                  padding: "10px 15px",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                Premium Package
+              </th>
             </tr>
             <tr className={classes.tr1}>
               <td
