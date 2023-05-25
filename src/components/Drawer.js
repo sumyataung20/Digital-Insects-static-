@@ -82,7 +82,7 @@ const DrawerLeft = () => {
             <li className={classes.listitem} onClick={handleLinkClick}>
               <Button variant="text">
                 <a
-                  href="#banner"
+                  href="#home"
                   className={classes.a}
                   style={{ fontSize: "15px", fontWeight: "bold" }}
                 >
@@ -130,7 +130,7 @@ const DrawerLeft = () => {
             <li className={classes.listitem}>
               <Button variant="text">
                 <a
-                  href="#footer"
+                  href="#contactus"
                   className={classes.a}
                   onClick={handleLinkClick}
                   style={{ fontSize: "15px", fontWeight: "bold" }}
