@@ -11,11 +11,14 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 40,
     fontWeight: 200,
     fontFamily: "My Font",
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("lg")]: {
       fontSize: 30,
     },
+    [theme.breakpoints.down("md")]: {
+      fontSize: 35,
+    },
     [theme.breakpoints.down("sm")]: {
-      fontSize: 25,
+      fontSize: 22,
     },
   },
 
@@ -41,15 +44,36 @@ const useStyles = makeStyles((theme) => ({
   },
 
   img: {
-    width: "350px",
-    height: "350px",
-    margin: "auto",
-    marginTop: "100px",
-    [theme.breakpoints.down("sm")]: {
-      //    marginLeft: theme.spacing(6),
+    width: "500px",
+    height: "500px",
+    marginLeft: "350px",
+    objectFit: "contain",
 
-      width: "0px",
-      height: "0px",
+    [theme.breakpoints.down("xl")]: {
+      marginLeft: "350px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      marginLeft: "100px",
+    },
+
+    [theme.breakpoints.down("md")]: {
+      width: "350px",
+      height: "350px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "350px",
+      height: "350px",
+      margin: "auto",
+    },
+  },
+
+  padding: {
+    paddingTop: "80px",
+    paddingBottom: "80px",
+
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: "40px",
+      paddingBottom: "40px",
     },
   },
 }));
@@ -58,7 +82,7 @@ const styles = {
   beneimg: {
     width: "600px",
     height: "600px",
-    paddingLeft: "900px",
+    paddingLeft: "800px",
   },
 };
 
@@ -72,6 +96,9 @@ const Benefitcomponent = () => {
         border: "none",
         shadow: 0,
         marginTop: "50px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
       <Grid container spacing={2}>
@@ -81,21 +108,10 @@ const Benefitcomponent = () => {
           sm={6}
           style={isReallyBigScreen ? styles.beneimg : styles.beneimg2}
         >
-          <CardMedia
-            component="img"
-            alt="Image"
-            height="200"
-            image={Benefits}
-            sx={{
-              width: "350px",
-              height: "350px",
-              margin: "auto",
-              marginTop: "100px",
-            }}
-          />
+          <img src={Benefits} className={classes.img} />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <CardContent style={{ paddingTop: "100px" }}>
+          <CardContent className={classes.padding}>
             <div className={classes.title1}>
               Benefits of having a website for a business
             </div>

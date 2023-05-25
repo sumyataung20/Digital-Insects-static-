@@ -51,7 +51,7 @@ const Footer = () => {
   const classes = useStyles();
   return (
     <div className={classes.appbar}>
-      <Container position="static" className={classes.container} id="footer">
+      <Container position="static" className={classes.container} id="contactus">
         <div
           style={{
             display: "flex",

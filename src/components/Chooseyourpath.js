@@ -11,7 +11,7 @@ import ClearIcon from "@mui/icons-material/Clear";
 const useStyles = makeStyles((theme) => ({
   title: {
     color: "#B10B0B",
-    fontSize: 50,
+    fontSize: 40,
     fontWeight: 200,
     textAlign: "center",
     fontFamily: "My Font",
@@ -19,11 +19,11 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "40px",
 
     [theme.breakpoints.down("md")]: {
-      fontSize: 40,
+      fontSize: 30,
     },
 
     [theme.breakpoints.down("sm")]: {
-      fontSize: 30,
+      fontSize: 25,
     },
   },
 
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "50px",
 
     [theme.breakpoints.down("sm")]: {
-      fontSize: 14,
+      fontSize: 12,
     },
   },
 
@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#B10B0B",
     color: "#FFFFFF",
     fontFamily: "Card Font",
-    fontSize: "16px",
+    fontSize: "14px",
     padding: "4px 30px",
     letterSpacing: "1px",
     fontWeight: 900,
@@ -169,6 +169,38 @@ const useStyles = makeStyles((theme) => ({
   badgeholder: {
     position: "relative",
   },
+
+  h6: {
+    fontFamily: "Card Font2",
+    color: "#B10B0B",
+    textAlign: "center",
+    fontSize: 25,
+    paddingTop: "40px",
+    marginBottom: "20px",
+    fontWeight: 100,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 22,
+    },
+  },
+
+  cost: {
+    color: "#B10B0B",
+    fontWeight: 900,
+    fontSize: "25px",
+    letterSpacing: "2px",
+    fontFamily: "Number Font",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 22,
+    },
+  },
+
+  text: {
+    color: "#404040",
+    textAlign: "center",
+    paddingLeft: "20px",
+    paddingRight: "20px",
+    paddingBottom: "30px",
+  },
 }));
 function MyComponent() {
   const classes = useStyles();
@@ -183,37 +215,14 @@ function MyComponent() {
           <Grid container spacing={2} sx={{ backgroundColor: "#FBF5F5" }}>
             <Grid item xs={12} sm={12} md={4} lg={4}>
               <div className={classes.card1}>
-                <h6
-                  style={{
-                    fontFamily: "Card Font2",
-                    color: "#B10B0B",
-                    textAlign: "center",
-                    fontSize: 25,
-                    paddingTop: "40px",
-                    marginBottom: "20px",
-                    fontWeight: 100,
-                  }}
-                >
-                  Intial Package
-                </h6>
+                <h6 className={classes.h6}>Intial Package</h6>
                 <p
                   style={{
                     textAlign: "center",
                     fontFamily: "Card Font",
                   }}
                 >
-                  <span
-                    style={{
-                      color: "#B10B0B",
-                      fontWeight: 900,
-                      fontSize: "25px",
-                      letterSpacing: "2px",
-                      fontFamily: "Number Font",
-                    }}
-                  >
-                    85,000
-                  </span>{" "}
-                  <br />{" "}
+                  <span className={classes.cost}>85,000</span> <br />{" "}
                   <span
                     style={{
                       color: "#5A5656",
@@ -223,54 +232,23 @@ function MyComponent() {
                     MMK / mo
                   </span>
                 </p>
-                <div
-                  style={{
-                    color: "#404040",
-                    textAlign: "center",
-                    paddingBottom: "50px",
-                    marginTop: "20px",
-                  }}
-                >
-                  Looking for an affordable web solution? <br />
-                  Our Initial Packages is suitable for you!
+                <div className={classes.text}>
+                  Looking for an affordable web solution? Our Initial Packages
+                  is suitable for you!
                 </div>
               </div>
             </Grid>
             <Grid item xs={12} sm={12} md={4} lg={4}>
               <div className={classes.card2}>
                 <span className={classes.badge}>POPULAR</span>
-                <h6
-                  style={{
-                    fontFamily: "Card Font2",
-                    color: "#B10B0B",
-                    textAlign: "center",
-                    fontSize: 25,
-                    paddingTop: "40px",
-                    marginBottom: "20px",
-                    fontWeight: 100,
-                  }}
-                >
-                  Recommended Package
-                </h6>
+                <h6 className={classes.h6}>Recommended Package</h6>
                 <p
                   style={{
                     textAlign: "center",
                     fontFamily: "Card Font",
                   }}
                 >
-                  <span
-                    style={{
-                      color: "#B10B0B",
-                      fontWeight: 900,
-
-                      fontSize: "25px",
-                      letterSpacing: "2px",
-                      fontFamily: "Number Font",
-                    }}
-                  >
-                    180,000
-                  </span>{" "}
-                  <br />{" "}
+                  <span className={classes.cost}>180,000</span> <br />{" "}
                   <span
                     style={{
                       color: "#5A5656",
@@ -280,52 +258,22 @@ function MyComponent() {
                     MMK / mo
                   </span>
                 </p>
-                <div
-                  style={{
-                    color: "#404040",
-                    textAlign: "center",
-                    paddingBottom: "30px",
-                    marginTop: "20px",
-                  }}
-                >
-                  Ready to take your online presence to the <br />
-                  next level? Our Recommended Package is <br /> perfect for you!
+                <div className={classes.text}>
+                  Ready to take your online presence to the next level? Our
+                  Recommended Package is perfect for you!
                 </div>
               </div>
             </Grid>
             <Grid item xs={12} sm={12} md={4} lg={4}>
               <div className={classes.card3}>
-                <h6
-                  style={{
-                    fontFamily: "Card Font2",
-                    color: "#B10B0B",
-                    textAlign: "center",
-                    fontSize: 25,
-                    paddingTop: "40px",
-                    marginBottom: "20px",
-                    fontWeight: 100,
-                  }}
-                >
-                  Premium Package
-                </h6>
+                <h6 className={classes.h6}>Premium Package</h6>
                 <p
                   style={{
                     textAlign: "center",
                     fontFamily: "Card Font",
                   }}
                 >
-                  <span
-                    style={{
-                      color: "#B10B0B",
-                      fontWeight: 900,
-                      fontSize: "25px",
-                      letterSpacing: "2px",
-                      fontFamily: "Number Font",
-                    }}
-                  >
-                    300,000
-                  </span>{" "}
-                  <br />{" "}
+                  <span className={classes.cost}>300,000</span> <br />{" "}
                   <span
                     style={{
                       color: "#5A5656",
@@ -335,15 +283,9 @@ function MyComponent() {
                     MMK / mo
                   </span>
                 </p>
-                <div
-                  style={{
-                    color: "#404040",
-                    textAlign: "center",
-                    paddingBottom: "30px",
-                  }}
-                >
-                  Looking for the ultimate online solution? <br />
-                  Our Premium Package offers everything <br /> you need!
+                <div className={classes.text}>
+                  Looking for the ultimate online solution? Our Premium Package
+                  offers everything you need!
                 </div>
               </div>
             </Grid>
@@ -360,266 +302,268 @@ function MyComponent() {
       >
         <div className={classes.tableContainer}>
           <table className={classes.table}>
-            <tr className={classes.tr}>
-              <th
-                className={classes.th}
-                style={{
-                  color: "#404040",
-                  minWidth: 150,
-                  textAlign: "start",
-                  fontWeight: "500",
-                  fontSize: "18px",
-                  width: "300px",
-                  padding: "10px 15px",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                Features
-              </th>
-              <th
-                className={classes.th}
-                style={{
-                  color: "#B10B0B",
-                  minWidth: 150,
-                  // textAlign: "start",
-                  fontWeight: "500",
-                  fontSize: "18px",
-                  width: "300px",
-                  padding: "10px 15px",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                Initial Package
-              </th>
+            <tbody>
+              <tr className={classes.tr}>
+                <th
+                  className={classes.th}
+                  style={{
+                    color: "#404040",
+                    minWidth: 150,
+                    textAlign: "start",
+                    fontWeight: "500",
+                    fontSize: "18px",
+                    width: "300px",
+                    padding: "10px 15px",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  Features
+                </th>
+                <th
+                  className={classes.th}
+                  style={{
+                    color: "#B10B0B",
+                    minWidth: 150,
+                    // textAlign: "start",
+                    fontWeight: "500",
+                    fontSize: "18px",
+                    width: "300px",
+                    padding: "10px 15px",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  Initial Package
+                </th>
 
-              <th
-                style={{
-                  color: "#B10B0B",
-                  minWidth: 150,
+                <th
+                  style={{
+                    color: "#B10B0B",
+                    minWidth: 150,
 
-                  fontWeight: "500",
-                  fontSize: "18px",
-                  width: "300px",
-                  padding: "10px 15px",
-                  whiteSpace: "nowrap",
-                }}
-                className={classes.badgeholder}
-              >
-                {" "}
-                <span className={classes.badge1}>popular</span>
-                Recommended Package
-              </th>
+                    fontWeight: "500",
+                    fontSize: "18px",
+                    width: "300px",
+                    padding: "10px 15px",
+                    whiteSpace: "nowrap",
+                  }}
+                  className={classes.badgeholder}
+                >
+                  {" "}
+                  <span className={classes.badge1}>popular</span>
+                  Recommended Package
+                </th>
 
-              <th
-                className={classes.th}
-                style={{
-                  color: "#B10B0B",
-                  minWidth: 150,
+                <th
+                  className={classes.th}
+                  style={{
+                    color: "#B10B0B",
+                    minWidth: 150,
 
-                  fontWeight: "500",
-                  fontSize: "18px",
-                  width: "300px",
-                  padding: "10px 15px",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                Premium Package
-              </th>
-            </tr>
-            <tr className={classes.tr1}>
-              <td
-                className={classes.th}
-                style={{ color: "#404040", textAlign: "start" }}
-              >
-                Web pages
-              </td>
-              <td className={classes.th} style={{ color: "#404040" }}>
-                Up to 10 pages
-              </td>
-              <td className={classes.th}>Up to 50 pages</td>
-              <td className={classes.th} style={{ color: "#404040" }}>
-                Unlimited Pages
-              </td>
-            </tr>
-            <tr className={classes.tr1}>
-              <th
-                className={classes.th}
-                style={{ color: "#404040", textAlign: "start" }}
-              >
-                Responsiveness
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-            </tr>
+                    fontWeight: "500",
+                    fontSize: "18px",
+                    width: "300px",
+                    padding: "10px 15px",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  Premium Package
+                </th>
+              </tr>
+              <tr className={classes.tr1}>
+                <td
+                  className={classes.th}
+                  style={{ color: "#404040", textAlign: "start" }}
+                >
+                  Web pages
+                </td>
+                <td className={classes.th} style={{ color: "#404040" }}>
+                  Up to 10 pages
+                </td>
+                <td className={classes.th}>Up to 50 pages</td>
+                <td className={classes.th} style={{ color: "#404040" }}>
+                  Unlimited Pages
+                </td>
+              </tr>
+              <tr className={classes.tr1}>
+                <th
+                  className={classes.th}
+                  style={{ color: "#404040", textAlign: "start" }}
+                >
+                  Responsiveness
+                </th>
+                <th className={classes.th}>
+                  <CheckIcon sx={{ color: "green" }} />
+                </th>
+                <th className={classes.th}>
+                  <CheckIcon sx={{ color: "green" }} />
+                </th>
+                <th className={classes.th}>
+                  <CheckIcon sx={{ color: "green" }} />
+                </th>
+              </tr>
 
-            <tr className={classes.tr1}>
-              <th
-                className={classes.th}
-                style={{ color: "#404040", textAlign: "start" }}
-              >
-                Design
-              </th>
-              <th className={classes.th} style={{ color: "#404040" }}>
-                Standard
-              </th>
-              <th className={classes.th} style={{ color: "#B10B0B" }}>
-                Innovative
-              </th>
-              <th className={classes.th} style={{ color: "#404040" }}>
-                Tailored
-              </th>
-            </tr>
+              <tr className={classes.tr1}>
+                <th
+                  className={classes.th}
+                  style={{ color: "#404040", textAlign: "start" }}
+                >
+                  Design
+                </th>
+                <th className={classes.th} style={{ color: "#404040" }}>
+                  Standard
+                </th>
+                <th className={classes.th} style={{ color: "#B10B0B" }}>
+                  Innovative
+                </th>
+                <th className={classes.th} style={{ color: "#404040" }}>
+                  Tailored
+                </th>
+              </tr>
 
-            <tr className={classes.tr1}>
-              <th
-                className={classes.th}
-                style={{ color: "#404040", textAlign: "start" }}
-              >
-                Social Media Integration
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-            </tr>
+              <tr className={classes.tr1}>
+                <th
+                  className={classes.th}
+                  style={{ color: "#404040", textAlign: "start" }}
+                >
+                  Social Media Integration
+                </th>
+                <th className={classes.th}>
+                  <CheckIcon sx={{ color: "green" }} />
+                </th>
+                <th className={classes.th}>
+                  <CheckIcon sx={{ color: "green" }} />
+                </th>
+                <th className={classes.th}>
+                  <CheckIcon sx={{ color: "green" }} />
+                </th>
+              </tr>
 
-            <tr className={classes.tr1}>
-              <th
-                className={classes.th}
-                style={{ color: "#404040", textAlign: "start" }}
-              >
-                Messenger Integration
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-            </tr>
+              <tr className={classes.tr1}>
+                <th
+                  className={classes.th}
+                  style={{ color: "#404040", textAlign: "start" }}
+                >
+                  Messenger Integration
+                </th>
+                <th className={classes.th}>
+                  <CheckIcon sx={{ color: "green" }} />
+                </th>
+                <th className={classes.th}>
+                  <CheckIcon sx={{ color: "green" }} />
+                </th>
+                <th className={classes.th}>
+                  <CheckIcon sx={{ color: "green" }} />
+                </th>
+              </tr>
 
-            <tr className={classes.tr1}>
-              <th
-                className={classes.th}
-                style={{ color: "#404040", textAlign: "start" }}
-              >
-                Content Management System
-              </th>
-              <th className={classes.th}>
-                <ClearIcon sx={{ color: "#DD0E0E" }} />
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-            </tr>
+              <tr className={classes.tr1}>
+                <th
+                  className={classes.th}
+                  style={{ color: "#404040", textAlign: "start" }}
+                >
+                  Content Management System
+                </th>
+                <th className={classes.th}>
+                  <ClearIcon sx={{ color: "#DD0E0E" }} />
+                </th>
+                <th className={classes.th}>
+                  <CheckIcon sx={{ color: "green" }} />
+                </th>
+                <th className={classes.th}>
+                  <CheckIcon sx={{ color: "green" }} />
+                </th>
+              </tr>
 
-            <tr className={classes.tr1}>
-              <th
-                className={classes.th}
-                style={{ color: "#404040", textAlign: "start" }}
-              >
-                User Registration
-              </th>
-              <th className={classes.th}>
-                <ClearIcon sx={{ color: "#DD0E0E" }} />
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-            </tr>
+              <tr className={classes.tr1}>
+                <th
+                  className={classes.th}
+                  style={{ color: "#404040", textAlign: "start" }}
+                >
+                  User Registration
+                </th>
+                <th className={classes.th}>
+                  <ClearIcon sx={{ color: "#DD0E0E" }} />
+                </th>
+                <th className={classes.th}>
+                  <CheckIcon sx={{ color: "green" }} />
+                </th>
+                <th className={classes.th}>
+                  <CheckIcon sx={{ color: "green" }} />
+                </th>
+              </tr>
 
-            <tr className={classes.tr1}>
-              <th
-                className={classes.th}
-                style={{ color: "#404040", textAlign: "start" }}
-              >
-                Team Management System
-              </th>
-              <th className={classes.th}>
-                <ClearIcon sx={{ color: "#DD0E0E" }} />
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-            </tr>
+              <tr className={classes.tr1}>
+                <th
+                  className={classes.th}
+                  style={{ color: "#404040", textAlign: "start" }}
+                >
+                  Team Management System
+                </th>
+                <th className={classes.th}>
+                  <ClearIcon sx={{ color: "#DD0E0E" }} />
+                </th>
+                <th className={classes.th}>
+                  <CheckIcon sx={{ color: "green" }} />
+                </th>
+                <th className={classes.th}>
+                  <CheckIcon sx={{ color: "green" }} />
+                </th>
+              </tr>
 
-            <tr className={classes.tr1}>
-              <th
-                className={classes.th}
-                style={{ color: "#404040", textAlign: "start" }}
-              >
-                Admin portal
-              </th>
-              <th className={classes.th}>
-                <ClearIcon sx={{ color: "#DD0E0E" }} />
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-            </tr>
+              <tr className={classes.tr1}>
+                <th
+                  className={classes.th}
+                  style={{ color: "#404040", textAlign: "start" }}
+                >
+                  Admin portal
+                </th>
+                <th className={classes.th}>
+                  <ClearIcon sx={{ color: "#DD0E0E" }} />
+                </th>
+                <th className={classes.th}>
+                  <CheckIcon sx={{ color: "green" }} />
+                </th>
+                <th className={classes.th}>
+                  <CheckIcon sx={{ color: "green" }} />
+                </th>
+              </tr>
 
-            <tr className={classes.tr1}>
-              <th
-                className={classes.th}
-                style={{ color: "#404040", textAlign: "start" }}
-              >
-                Push notification
-              </th>
-              <th className={classes.th}>
-                <ClearIcon sx={{ color: "#DD0E0E" }} />
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-              <th className={classes.th}>
-                <CheckIcon sx={{ color: "green" }} />
-              </th>
-            </tr>
+              <tr className={classes.tr1}>
+                <th
+                  className={classes.th}
+                  style={{ color: "#404040", textAlign: "start" }}
+                >
+                  Push notification
+                </th>
+                <th className={classes.th}>
+                  <ClearIcon sx={{ color: "#DD0E0E" }} />
+                </th>
+                <th className={classes.th}>
+                  <CheckIcon sx={{ color: "green" }} />
+                </th>
+                <th className={classes.th}>
+                  <CheckIcon sx={{ color: "green" }} />
+                </th>
+              </tr>
 
-            <tr className={classes.tr1}>
-              <th
-                className={classes.th}
-                style={{ color: "#404040", textAlign: "start" }}
-              >
-                Customer Support
-              </th>
-              <th className={classes.th} style={{ color: "#404040" }}>
-                Normal
-              </th>
-              <th className={classes.th} style={{ color: "#B10B0B" }}>
-                Prioritized
-              </th>
-              <th className={classes.th} style={{ color: "#404040" }}>
-                24/7
-              </th>
-            </tr>
+              <tr className={classes.tr1}>
+                <th
+                  className={classes.th}
+                  style={{ color: "#404040", textAlign: "start" }}
+                >
+                  Customer Support
+                </th>
+                <th className={classes.th} style={{ color: "#404040" }}>
+                  Normal
+                </th>
+                <th className={classes.th} style={{ color: "#B10B0B" }}>
+                  Prioritized
+                </th>
+                <th className={classes.th} style={{ color: "#404040" }}>
+                  24/7
+                </th>
+              </tr>
+            </tbody>
           </table>
         </div>
       </Container>

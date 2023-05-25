@@ -115,7 +115,7 @@ const Banner = () => {
   const classes = useStyles();
   const isReallyBigScreen = useMediaQuery("(min-width: 3440px)");
   return (
-    <div className={classes.container} id="banner">
+    <div className={classes.container} id="home">
       <Grid container spacing={2} className={classes.container}>
         <Grid
           item

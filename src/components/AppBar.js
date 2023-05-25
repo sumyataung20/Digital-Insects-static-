@@ -93,7 +93,7 @@ const AppBarComponent = (props) => {
                 <>
                   <ul className={classes.navbar}>
                     <li className={classes.listitem}>
-                      <a href="#banner" className={classes.a}>
+                      <a href="#home" className={classes.a}>
                         Home
                       </a>
                     </li>
@@ -108,7 +108,7 @@ const AppBarComponent = (props) => {
                       </a>
                     </li>
                     <li className={classes.listitem}>
-                      <a href="#footer" className={classes.a}>
+                      <a href="#contactus" className={classes.a}>
                         Contact Us
                       </a>
                     </li>
