@@ -1,7 +1,8 @@
 import React from "react";
-import { Grid, Card, CardMedia, CardContent, Typography } from "@mui/material";
+import { Grid, CardContent, Typography } from "@mui/material";
 import Benefits from "../Images/Benefits.png";
 import { useMediaQuery } from "@mui/material";
+import { Container } from "@mui/material";
 import "../App.css";
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -46,24 +47,28 @@ const useStyles = makeStyles((theme) => ({
   img: {
     width: "500px",
     height: "500px",
-    marginLeft: "350px",
+    marginLeft: "200px",
     objectFit: "contain",
 
     [theme.breakpoints.down("xl")]: {
-      marginLeft: "350px",
+      marginLeft: "200px",
     },
     [theme.breakpoints.down("lg")]: {
       marginLeft: "100px",
     },
 
     [theme.breakpoints.down("md")]: {
-      width: "350px",
-      height: "350px",
+      width: "500px",
+      height: "500px",
+      marginLeft: "50px",
     },
     [theme.breakpoints.down("sm")]: {
-      width: "350px",
-      height: "350px",
-      marginLeft: "20px",
+      width: "400px",
+      height: "400px",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      margin: "auto",
     },
   },
 
@@ -73,7 +78,14 @@ const useStyles = makeStyles((theme) => ({
 
     [theme.breakpoints.down("sm")]: {
       paddingTop: "40px",
-      paddingBottom: "40px",
+      // paddingBottom: "0px",
+    },
+  },
+
+  container: {
+    paddingTop: "100px",
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: "60px",
     },
   },
 }));
@@ -82,7 +94,6 @@ const styles = {
   beneimg: {
     width: "600px",
     height: "600px",
-    paddingLeft: "800px",
   },
 };
 
@@ -90,27 +101,18 @@ const Benefitcomponent = () => {
   const classes = useStyles();
   const isReallyBigScreen = useMediaQuery("(min-width: 3440px)");
   return (
-    <Card
-      variant="outlined"
-      style={{
-        border: "none",
-        shadow: 0,
-        marginTop: "50px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <Container maxWidth="xl" className={classes.container}>
       <Grid container spacing={2}>
         <Grid
           item
           xs={12}
-          sm={6}
+          sm={12}
+          md={6}
           style={isReallyBigScreen ? styles.beneimg : styles.beneimg2}
         >
-          <img src={Benefits} className={classes.img} />
+          <img src={Benefits} className={classes.img} alt="img" />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={12} md={6}>
           <CardContent className={classes.padding}>
             <div className={classes.title1}>
               Benefits of having a website for a business
@@ -170,7 +172,7 @@ const Benefitcomponent = () => {
           </CardContent>
         </Grid>
       </Grid>
-    </Card>
+    </Container>
   );
 };
 

@@ -111,7 +111,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   table: {
-    marginTop: "150px",
+    marginTop: "100px",
     borderCollapse: "collapse",
 
     maxWidth: "100%",
@@ -206,7 +206,7 @@ function MyComponent() {
   const classes = useStyles();
   return (
     <Box className={classes.box}>
-      <Container maxWidth="xl" id="packages" style={{ paddingTop: "30px" }}>
+      <Container maxWidth="xl" id="packages" style={{ paddingTop: "50px" }}>
         <div className={classes.title}>Choose Your Path To Success</div>
         <div className={classes.subtitle}>
           ----- TAILORED FOR YOUR WEB SERVICE GOALS -----

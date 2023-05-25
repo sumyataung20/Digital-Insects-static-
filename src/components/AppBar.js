@@ -66,6 +66,7 @@ const AppBarComponent = (props) => {
   return (
     <>
       <React.Fragment>
+        {/* <Container maxWidth="xl"> */}
         <div
           style={{
             position: "fixed",
@@ -119,6 +120,7 @@ const AppBarComponent = (props) => {
             {/* // <DrawerLeft /> */}
           </AppBar>
         </div>
+        {/* </Container> */}
       </React.Fragment>
     </>
   );

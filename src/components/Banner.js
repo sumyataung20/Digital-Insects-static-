@@ -1,7 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography, Box } from "@material-ui/core";
-import { useMediaQuery } from "@mui/material";
+
+import { Container } from "@mui/material";
 import Banner2 from "./Banner2";
 import "../App.css";
 
@@ -13,15 +14,15 @@ const useStyles = makeStyles((theme) => ({
     // paddingLeft: "500px",
 
     [theme.breakpoints.down("xl")]: {
-      marginLeft: theme.spacing(35),
-      marginTop: theme.spacing(20),
+      marginLeft: theme.spacing(3),
+      marginTop: theme.spacing(15),
       fontSize: 70,
       // fontWeight: 500,
       lineHeight: "120px",
       letterSpacing: "5px",
     },
     [theme.breakpoints.down("lg")]: {
-      marginTop: theme.spacing(20), // Margin for lg size and above
+      marginTop: theme.spacing(3), // Margin for lg size and above
       marginLeft: theme.spacing(10),
       fontSize: 55,
       // fontWeight: 300,
@@ -29,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
       letterSpacing: "4px",
     },
     [theme.breakpoints.down("md")]: {
-      marginTop: theme.spacing(18), // Margin for md size and below
+      marginTop: theme.spacing(10), // Margin for md size and below
       marginLeft: theme.spacing(3),
 
       fontSize: 50,
@@ -65,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "My Font1",
     // paddingLeft: "500px",
     [theme.breakpoints.down("xl")]: {
-      marginLeft: theme.spacing(35),
+      marginLeft: theme.spacing(3),
       marginTop: theme.spacing(5),
       fontSize: 25,
       fontWeight: 100,
@@ -113,46 +114,43 @@ const useStyles = makeStyles((theme) => ({
 
 const Banner = () => {
   const classes = useStyles();
-  const isReallyBigScreen = useMediaQuery("(min-width: 3440px)");
+
   return (
     <div className={classes.container} id="home">
-      <Grid container spacing={2} className={classes.container}>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={6}
-          lg={6}
-          xl={6}
-          sx={{ marginTop: "50%" }}
-          style={
-            isReallyBigScreen
-              ? { paddingLeft: "700px" }
-              : { paddingLeft: "0px" }
-          }
-        >
-          <Typography
-            variant="h1"
-            className={classes.text}
-            sx={{ margin: "auto" }}
+      <Container maxWidth="xl">
+        <Grid container spacing={2} className={classes.container}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={6}
+            lg={6}
+            xl={6}
+            sx={{ marginTop: "50%" }}
           >
-            GROW YOUR <br />
-            BUSINESS WITH <br />
-            OUR TEAM
-          </Typography>
+            <Typography
+              variant="h1"
+              className={classes.text}
+              sx={{ margin: "auto" }}
+            >
+              GROW YOUR <br />
+              BUSINESS WITH <br />
+              OUR TEAM
+            </Typography>
 
-          <p className={classes.text1} sx={{ margin: "auto" }}>
-            Contact for a free consultation now and <br />
-            see how our web service can help your <br />
-            business thrive
-          </p>
+            <p className={classes.text1} sx={{ margin: "auto" }}>
+              Contact for a free consultation now and <br />
+              see how our web service can help your <br />
+              business thrive
+            </p>
+          </Grid>
+          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+            <Box>
+              <Banner2 />
+            </Box>
+          </Grid>
         </Grid>
-        <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-          <Box>
-            <Banner2 />
-          </Box>
-        </Grid>
-      </Grid>
+      </Container>
     </div>
   );
 };

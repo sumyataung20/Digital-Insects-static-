@@ -5,14 +5,14 @@ import banner from "../Images/Banner.png";
 const useStyles = makeStyles((theme) => ({
   banner: {
     [theme.breakpoints.down("xl")]: {
-      marginTop: theme.spacing(5),
+      marginTop: theme.spacing(12),
       marginBottom: theme.spacing(2),
       marginLeft: "50px",
       width: "700px",
       height: "800px",
     },
     [theme.breakpoints.down("lg")]: {
-      marginTop: theme.spacing(10),
+      marginTop: theme.spacing(12),
       marginBottom: theme.spacing(2),
       width: "550px",
       height: "550px",
